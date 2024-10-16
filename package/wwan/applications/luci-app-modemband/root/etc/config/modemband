@@ -1,0 +1,7 @@
+
+config modemband
+	option iface 'wan'
+	option set_port '/dev/ttyUSB2'
+	option wanrestart '0'
+	option modemrestart '0'
+	option notify '0'
