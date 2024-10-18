@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+
+START=89
+
+boot() {
+	case $(board_name) in
+	openembed,som7981)
+		ethtool -s eth0 autoneg on
+		ip link set eth0 down
+		ip link set eth0 up
+		;;
+	esac
+}
